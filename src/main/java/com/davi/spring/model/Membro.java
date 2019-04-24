@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class Membro {
 
+    private int id;
     private String nome;
     private String funcao;
     private String email;
@@ -13,7 +14,8 @@ public class Membro {
     public Membro() {
     }
 
-    public Membro(String nome, String funcao, String email, Date dataEntradaFuncao, Date dataSaidaFuncao) {
+    public Membro(int id, String nome, String funcao, String email, Date dataEntradaFuncao, Date dataSaidaFuncao) {
+        this.id = id;
         this.nome = nome;
         this.funcao = funcao;
         this.email = email;
@@ -59,5 +61,25 @@ public class Membro {
 
     public void setDataSaidaFuncao(Date dataSaidaFuncao) {
         this.dataSaidaFuncao = dataSaidaFuncao;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Membro{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", funcao='" + funcao + '\'' +
+                ", email='" + email + '\'' +
+                ", dataEntradaFuncao=" + dataEntradaFuncao +
+                ", dataSaidaFuncao=" + dataSaidaFuncao +
+                '}';
     }
 }

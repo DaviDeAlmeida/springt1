@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Sede {
 
+    private int id;
     private String fantasia;
     private String estado;
     private String cidade;
@@ -16,8 +17,9 @@ public class Sede {
     public Sede() {
     }
 
-    public Sede(String fantasia, String estado, String cidade, String bairro, String telefone,
+    public Sede(int id, String fantasia, String estado, String cidade, String bairro, String telefone,
                 String enderecoWeb, ArrayList<Membro> membros, ArrayList<Atividade> atividades) {
+        this.id = id;
         this.fantasia = fantasia;
         this.estado = estado;
         this.cidade = cidade;
@@ -90,5 +92,28 @@ public class Sede {
 
     public void setAtividades(ArrayList<Atividade> atividades) {
         this.atividades = atividades;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Sede{" +
+                "id=" + id +
+                ", fantasia='" + fantasia + '\'' +
+                ", estado='" + estado + '\'' +
+                ", cidade='" + cidade + '\'' +
+                ", bairro='" + bairro + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", enderecoWeb='" + enderecoWeb + '\'' +
+                ", membros=" + membros +
+                ", atividades=" + atividades +
+                '}';
     }
 }
