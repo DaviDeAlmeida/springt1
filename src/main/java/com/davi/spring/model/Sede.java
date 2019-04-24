@@ -1,10 +1,17 @@
 package com.davi.spring.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.ArrayList;
 
+@Entity
 public class Sede {
 
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
     private String fantasia;
     private String estado;
     private String cidade;
@@ -17,7 +24,7 @@ public class Sede {
     public Sede() {
     }
 
-    public Sede(int id, String fantasia, String estado, String cidade, String bairro, String telefone,
+    public Sede(Long id, String fantasia, String estado, String cidade, String bairro, String telefone,
                 String enderecoWeb, ArrayList<Membro> membros, ArrayList<Atividade> atividades) {
         this.id = id;
         this.fantasia = fantasia;
@@ -94,11 +101,11 @@ public class Sede {
         this.atividades = atividades;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

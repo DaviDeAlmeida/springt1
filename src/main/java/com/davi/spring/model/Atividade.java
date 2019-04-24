@@ -1,10 +1,17 @@
 package com.davi.spring.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
 
+@Entity
 public class Atividade {
 
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
     private String titulo;
     private String descicao;
     private Date dataInicio;
@@ -14,7 +21,7 @@ public class Atividade {
     public Atividade() {
     }
 
-    public Atividade(int id, String titulo, String descicao, Date dataInicio, Date dataFim, String categoria) {
+    public Atividade(Long id, String titulo, String descicao, Date dataInicio, Date dataFim, String categoria) {
         this.id = id;
         this.titulo = titulo;
         this.descicao = descicao;
@@ -63,11 +70,11 @@ public class Atividade {
         this.categoria = categoria;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
