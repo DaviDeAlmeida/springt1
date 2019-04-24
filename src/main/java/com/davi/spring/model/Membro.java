@@ -21,6 +21,11 @@ public class Membro {
     public Membro() {
     }
 
+    public Membro(String nome, String funcao) {
+        this.nome = nome;
+        this.funcao = funcao;
+    }
+
     public Membro(Long id, String nome, String funcao, String email, Date dataEntradaFuncao, Date dataSaidaFuncao) {
         this.id = id;
         this.nome = nome;
