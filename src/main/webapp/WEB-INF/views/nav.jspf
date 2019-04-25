@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <link href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/webjars/font-awesome/5.8.1/css/fontawesome.min.css">
+    <script src="webjars/jquery/3.0.0/jquery.min.js"></script>
+    <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="/index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/membro-listar.html">Membros</a>
+            <a class="nav-item nav-link" href="/atividade-listar.html">Atividades</a>
+            <a class="nav-item nav-link" href="/sede-listar.html">Sedes</a>
+        </div>
+    </div>
+</nav>
+
+</body>
+</html>

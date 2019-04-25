@@ -1,9 +1,6 @@
 package com.davi.spring.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.ArrayList;
 
 @Entity
@@ -18,6 +15,8 @@ public class Sede {
     private String bairro;
     private String telefone;
     private String enderecoWeb;
+    //@OneToMany(fetch = FetchType.LAZY)
+    //@JoinColumn(name = "id", nullable = false)
     private ArrayList<Membro> membros;
     private ArrayList<Atividade> atividades;
 

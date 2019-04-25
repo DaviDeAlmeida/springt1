@@ -13,7 +13,7 @@ public class Atividade {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String titulo;
-    private String descicao;
+    private String descricao;
     private Date dataInicio;
     private Date dataFim;
     private String categoria;
@@ -21,10 +21,15 @@ public class Atividade {
     public Atividade() {
     }
 
-    public Atividade(Long id, String titulo, String descicao, Date dataInicio, Date dataFim, String categoria) {
+    public Atividade(String titulo, String descricao) {
+        this.titulo = titulo;
+        this.descricao = descricao;
+    }
+
+    public Atividade(Long id, String titulo, String descricao, Date dataInicio, Date dataFim, String categoria) {
         this.id = id;
         this.titulo = titulo;
-        this.descicao = descicao;
+        this.descricao = descricao;
         this.dataInicio = dataInicio;
         this.dataFim = dataFim;
         this.categoria = categoria;
@@ -38,13 +43,9 @@ public class Atividade {
         this.titulo = titulo;
     }
 
-    public String getDescicao() {
-        return descicao;
-    }
+    public String getDescricao() { return descricao; }
 
-    public void setDescicao(String descicao) {
-        this.descicao = descicao;
-    }
+    public void setDescricao(String descricao) { this.descricao = descricao; }
 
     public Date getDataInicio() {
         return dataInicio;
@@ -83,7 +84,7 @@ public class Atividade {
         return "Atividade{" +
                 "id=" + id +
                 ", titulo='" + titulo + '\'' +
-                ", descicao='" + descicao + '\'' +
+                ", descricao='" + descricao + '\'' +
                 ", dataInicio=" + dataInicio +
                 ", dataFim=" + dataFim +
                 ", categoria='" + categoria + '\'' +
